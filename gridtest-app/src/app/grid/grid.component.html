@@ -1,0 +1,7 @@
+<ej-grid  #myGrid *ngIf="gridData"  id="Grid" [dataSource]="gridDataInit"  [allowPaging] = "true"  >
+    <e-columns class="columns">
+        <e-column *ngFor="let column of columns" field={{column.fieldName}} headerText={{column.header}} 
+        width="80" textAlign="left"></e-column>
+    </e-columns>
+</ej-grid>
+
