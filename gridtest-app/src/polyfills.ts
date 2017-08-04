@@ -72,7 +72,7 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
 // import 'intl/locale-data/jsonp/en';
 /************************************************************************************
  * Imports of jquery to support syncfusion library
- */
+*/
 import * as jquery from 'jquery';
 window['jQuery'] = jquery;
 window['$'] = jquery;
