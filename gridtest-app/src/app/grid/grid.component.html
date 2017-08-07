@@ -1,10 +1,7 @@
-
-<ej-grid [allowPaging]="true" [allowSorting]="true" [dataSource]="gridData">
-    <e-columns>
-        <e-column field="OrderID" headerText="Order ID" width="75" textAlign="right"></e-column>
-        <e-column field="CustomerID" headerText="Customer ID" width="80"></e-column>
-        <e-column field="EmployeeID" headerText="Employee ID" width="75" textAlign="right"></e-column>
-        <e-column field="Freight" width="75" format="{0:C}" textAlign="right"></e-column>
-        <e-column field="OrderDate" headerText="Order Date" width="80" format="{0:MM/dd/yyyy}" textAlign="right"></e-column>
+<ej-grid  #myGrid *ngIf="gridData"  id="Grid" [dataSource]="gridData"  [allowPaging] = "true"  >
+    <e-columns class="columns">
+        <e-column *ngFor="let column of columns" field={{column.fieldName}} headerText={{column.header}} 
+        width="80" textAlign="left"></e-column>
     </e-columns>
 </ej-grid>
+
